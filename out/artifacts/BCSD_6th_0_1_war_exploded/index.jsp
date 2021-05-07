@@ -13,8 +13,6 @@
   </head>
   <body>
   잘들어왔어<br>
-  6주차 과제야<br>
-  <a href="/scott/test/link">test ViewResolver</a>
-
+  6주차 과제야
   </body>
 </html>
