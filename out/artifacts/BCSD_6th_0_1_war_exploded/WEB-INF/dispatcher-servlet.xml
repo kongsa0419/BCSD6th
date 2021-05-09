@@ -21,7 +21,7 @@
         <property name="suffix" value=".jsp"></property>
     </bean>
 
-    <aop:aspectj-autoproxy />
+<!--    <aop:aspectj-autoproxy />-->
 <!--    <mvc:interceptors>-->
 <!--        <mvc:interceptor>-->
 <!--            <mvc:mapping path="/**" />-->

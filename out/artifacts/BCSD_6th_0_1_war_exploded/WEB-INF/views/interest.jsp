@@ -12,6 +12,6 @@
 </head>
 <body>
 what are you interested in?
-<a href="/scott/test/link">GO BACK</a> <a href="https://naver.com">no thanks, bye</a>
+<a href="/scott/test/link">GO BACK</a> <br> <a href="https://naver.com">no thanks, bye</a>
 </body>
 </html>

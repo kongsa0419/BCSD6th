@@ -10,14 +10,16 @@ public class Product {
     float price;
     String countryCode;
 
-
+/*
+생성자를 이렇게쓰니까 new Product()할때 일일히 넣어줘야돼서 피곤해지더라...
+롬복쓰면 좋을듯
     public Product(int id, String name, float price, String countryCode) {
         this.id = id;
         this.name = name;
         this.price = price;
         this.countryCode = countryCode;
     }
-
+*/
     public int getId() {
         return id;
     }

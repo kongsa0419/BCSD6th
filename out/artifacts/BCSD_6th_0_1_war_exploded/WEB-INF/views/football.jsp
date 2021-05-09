@@ -12,6 +12,6 @@
 </head>
 <body>
     hello, my hobby is playing football!
-<a href="/scott/test/link">GO BACK</a>  <a href="/scott/test/rpbody">@ResponseBody test</a>
+<a href="/scott/test/link">GO BACK</a> <br> <a href="/scott/test/rpbody">@ResponseBody test</a>
 </body>
 </html>

@@ -14,7 +14,8 @@
   <body>
   잘들어왔어<br>
   6주차 과제야<br>
-  <a href="/scott/test/link">test ViewResolver</a>
+  jsp index crud board <br>
+  <a href="/product/list">Product 게시판 가기</a>
 
   </body>
 </html>

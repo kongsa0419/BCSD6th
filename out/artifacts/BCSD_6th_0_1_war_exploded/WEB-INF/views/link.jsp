@@ -11,6 +11,6 @@
     <title>Link pages</title>
 </head>
 <body>
-<a href="/scott/test/football">my hobby is...</a>   <a href="/scott/test/interest">boring?</a>
+<a href="/scott/test/football">my hobby is...</a>  <br> <a href="/scott/test/interest">boring?</a>
 </body>
 </html>

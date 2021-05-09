@@ -13,6 +13,9 @@
   </head>
   <body>
   잘들어왔어<br>
-  6주차 과제야
+  6주차 과제야<br>
+  jsp index crud board <br>
+  <a href="/product/list">Product 게시판 가기</a>
+
   </body>
 </html>
