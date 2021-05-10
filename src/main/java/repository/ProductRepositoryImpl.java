@@ -19,7 +19,7 @@ public class ProductRepositoryImpl implements ProductRepository {
     private String driverClassName = "com.mysql.cj.jdbc.Driver";
     private String url = "jdbc:mysql://localhost:3306/temp?characterEncoding=UTF-8&serverTimezone=UTC";
     private String username = "root";
-    private String password = "Saengdo1108#";
+    private String password = "PASS";
 
     private Connection conn = null; //자바와 데이터베이스를 연결
     private PreparedStatement pstmt = null; //쿼리문 대기 및 설정
