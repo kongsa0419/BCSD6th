@@ -8,6 +8,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import service.ProductService;
 
+import java.sql.SQLException;
 import java.util.List;
 
 //no jsp!!!!!
@@ -30,7 +31,7 @@ public class ProductController {
 
     @ResponseBody
     @RequestMapping(value = "/product/list", method = RequestMethod.POST)
-    public String saveProduct(@RequestBody Product product){
+    public String saveProduct(@RequestBody Product product) throws SQLException {
         if(product != null)
             productService.save(product);
         return "redirect:/product/list";
@@ -51,57 +52,3 @@ public class ProductController {
         return "redirect:/product/list";
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*
-    //기본적으로 RequestMethod.GET 메서드일껄? : 맞음
-    @RequestMapping(value = "/football")
-    public String football(){
-        return "football";
-    }
-
-    @RequestMapping(value = "/link", method = RequestMethod.GET)
-    public String linkPage(){
-        return "link";
-    }
-
-
-    @RequestMapping(value = "/interest")
-    public String interest(){
-        return "interest";
-    }
-
-    @ResponseBody
-    @RequestMapping(value = "/rpbody")
-    public String rpResponse(){
-        return "this return @ResponseBody. \n it's just a test :)" +
-                "\n if you don't put @ResponseBody on your method, and then when VIEWRESOLVER couldn't match name.jsp, then error rises.";
-    }
- */

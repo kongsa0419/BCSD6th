@@ -1,24 +1,19 @@
 package repository;
 
 import dto.Product;
-import org.eclipse.jdt.internal.compiler.tool.EclipseBatchRequestor;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.PropertySource;
+import org.springframework.context.annotation.EnableAspectJAutoProxy;
 import org.springframework.stereotype.Repository;
 
-import java.sql.*;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
 
-
+//@EnableAspectJAutoProxy //오토프록싱
 @Repository
 public class ProductRepositoryImpl implements ProductRepository {
-/*
-https://gmlwjd9405.github.io/2018/05/15/setting-for-db-programming.html  : JDBCTemplate 사용 (간결화)
-*   https://4ngeunlee.tistory.com/238 를 통해 비번설정 -> plain JDBC API (코드가 길고 불편)
-*
-service, repository 구조에서 에러터지면 참조 (서비스 xml로 빈 등록 -> 싱글톤, autowired 가능해짐) : https://m.blog.naver.com/scw0531/220988401816
-*/
 
 // application.properties 쓰고싶었는데 못썼음...
     private String driverClassName = "com.mysql.cj.jdbc.Driver";
