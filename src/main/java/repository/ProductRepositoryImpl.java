@@ -1,28 +1,45 @@
 package repository;
 
 import dto.Product;
+import org.apache.ibatis.io.Resources;
 import org.springframework.context.annotation.EnableAspectJAutoProxy;
 import org.springframework.stereotype.Repository;
 
+import java.io.IOException;
+import java.io.Reader;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Properties;
 
 //@EnableAspectJAutoProxy //오토프록싱
 @Repository
 public class ProductRepositoryImpl implements ProductRepository {
 
-// application.properties 쓰고싶었는데 못썼음...
-    private String driverClassName = "com.mysql.cj.jdbc.Driver";
-    private String url = "jdbc:mysql://localhost:3306/temp?characterEncoding=UTF-8&serverTimezone=UTC";
-    private String username = "root";
-    private String password = "PASS";
+    String configPath = "mybatis/config.properties";
+    Properties properties = new Properties();
+
+    {
+        try {
+            Reader reader = Resources.getResourceAsReader(configPath);
+            properties.load(reader);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+
+    // application.properties 쓰고싶었는데 못썼음...
+    private String driverClassName = properties.getProperty("spring.datasource.driver-class-name");
+    private String url = properties.getProperty("spring.datasource.url");
+    private String username = properties.getProperty("spring.datasource.username");
+    private String password = properties.getProperty("spring.datasource.password");
 
     private Connection conn = null; //자바와 데이터베이스를 연결
-    private PreparedStatement pstmt = null; //쿼리문 대기 및 설정
+    private PreparedStatement pstmt = null; //쿼리문 대기 및 설정z
     private ResultSet rs = null; //결과값 받아오기
     String sql= null;
 
